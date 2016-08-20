@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        final DateDialog dialo = new DateDialog(this, new DateDialog.IntefaceDateDialog() {
+        final DateDialog dialo = new DateDialog(this, new DateDialog.InterfaceDateDialog() {
             @Override
             public void getTime(String dateTime) {
                 Toast.makeText(MainActivity.this,dateTime,Toast.LENGTH_LONG).show();
