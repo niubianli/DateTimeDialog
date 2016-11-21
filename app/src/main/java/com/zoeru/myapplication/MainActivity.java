@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_time1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-             DateDialog dateDialog=   new DateDialog(MainActivity.this,"获取当前时间日期", DateDialog.MODE_1, new DateDialog.InterfaceDateDialog() {
+                DateDialog dateDialog=   new DateDialog(MainActivity.this,"获取当前时间日期", DateDialog.MODE_1, new DateDialog.InterfaceDateDialog() {
                     @Override
                     public void getTime(String dateTime) {
                         Toast.makeText(MainActivity.this,dateTime,Toast.LENGTH_LONG).show();
@@ -57,6 +57,19 @@ public class MainActivity extends AppCompatActivity {
                 dateDialog.show();
             }
         });
-
+        findViewById(R.id.btn_time4).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DateDialog dateDialog=     new DateDialog(MainActivity.this,"获取当前时间日期", DateDialog.MODE_4, new DateDialog.InterfaceDateDialog() {
+                    @Override
+                    public void getTime(String dateTime) {
+                        Toast.makeText(MainActivity.this,dateTime,Toast.LENGTH_LONG).show();
+                    }
+                } );
+                dateDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                dateDialog.show();
+            }
+        });
     }
+
 }
